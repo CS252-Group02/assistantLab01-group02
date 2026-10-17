@@ -75,6 +75,16 @@ python -m pytest -v
 
 The test configuration is defined in `pyproject.toml`, and tests are collected from the `tests/` directory. A successful run reports the number of tests passed; if a test fails, review the failure details printed by `pytest`.
 
+## Evaluation
+
+Run the benchmark from the repository root:
+
+```bash
+python eval/run.py
+```
+
+The script evaluates the assistant against `eval/cases.csv` and prints its accuracy.
+
 ## Project structure
 
 ```text
