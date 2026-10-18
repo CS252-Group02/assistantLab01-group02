@@ -1,21 +1,6 @@
-# AI Service: 10 Questions That Need AI vs. 10 That Do Not
 
-This document defines the architectural boundary between user requests that can be resolved via **deterministic rules and structured data lookups (Rule-based / Deterministic Lookup)** and those that require **Large Language Models (LLM / Generative AI)** within the *Smart Virtual Assistant* project.
 
----
-
-## 1. Classification Criteria
-
-| Criteria | Rule-Based / Deterministic (No AI) | AI Service / LLM (Needs AI) |
-| :--- | :--- | :--- |
-| **Data Nature** | Structured tabular data (`offices.csv`, databases, REST APIs). | Unstructured text (regulations, student handbooks, policy PDFs, open-ended queries). |
-| **Linguistic Variability** | Fixed keywords, exact syntax, closed intents. | Colloquial language, slang, typos, abbreviations, multi-intent queries. |
-| **Processing Logic** | String matching (exact/partial), key-value lookup, boolean branching. | Multi-step reasoning, contextual synthesis, natural language generation. |
-| **Cost & Latency** | Sub-millisecond execution (< 5ms), zero compute/token cost. | Model inference latency (500ms – 3s), API/token consumption cost. |
-
----
-
-## 2. 10 Questions That Do NOT Need AI (Deterministic / Rule-Based)
+## 1. 10 Questions That Do NOT Need AI (Deterministic / Rule-Based)
 
 These queries can be resolved entirely using table lookups, regular expressions, or static control handlers.
 
@@ -34,7 +19,7 @@ These queries can be resolved entirely using table lookups, regular expressions,
 
 ---
 
-## 3. 10 Questions That NEED AI (LLM / Generative AI / NLU)
+## 2. 10 Questions That NEED AI (LLM / Generative AI / NLU)
 
 These queries require deep natural language understanding, multi-step logical deduction, document synthesis, or contextual text generation.
 
